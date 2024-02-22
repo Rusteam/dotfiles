@@ -158,6 +158,11 @@ alias ycs3='aws s3 --endpoint-url=https://storage.yandexcloud.net'
 alias oq="open -a QGIS"
 alias or="open -R"
 
+# private file
+if [[ -f ~/.zshrc_private ]]; then
+  source ~/.zshrc_private
+fi
+
 # vi-mode plugin
 VI_MODE_SET_CURSOR=true
 MODE_INDICATOR="%F{white}+%f"
