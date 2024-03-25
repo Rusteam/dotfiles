@@ -1,12 +1,17 @@
 return {
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+  -- "williamboman/mason.nvim",
+  -- "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
 
-  config = function()
-    require("mason").setup()
-    require("mason-lspconfig").setup({ automatic_installation = {
-      exclude = { "pyright" },
-    } })
-  end,
+  opts = {
+    servers = {
+      pylsp = {
+        plugins = {
+          rope_autoimport = {
+            enabled = true,
+          },
+        },
+      },
+    },
+  },
 }

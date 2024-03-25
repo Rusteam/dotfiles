@@ -3,7 +3,16 @@ return {
   ft = "python",
 
   config = function()
-    vim.g.doge_mapping = "<leader>DG"
     vim.g.doge_doc_standard_python = "google"
   end,
+
+  keys = {
+    {
+      "<leader>DG",
+      ":DogeGenerate<cr>",
+      desc = "Generate documentation with vim-doge",
+      mode = { "n", "v" },
+      noremap = true,
+    },
+  },
 }

@@ -27,5 +27,6 @@ return {
 
   opts = {
     -- your configuration overrides
+    model = "llama2",
   },
 }
