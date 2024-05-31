@@ -18,6 +18,7 @@ make
 
 ```bash
 make tmux
-make zsh
-make nvim
+make omz
+make vim
+make p10k
 ```
