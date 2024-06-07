@@ -22,3 +22,10 @@ make omz
 make vim
 make p10k
 ```
+
+**Install system-wide python tools:**
+
+```
+make conda
+make poetry
+```
