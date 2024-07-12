@@ -42,3 +42,8 @@ poetry:
 	curl -sSL https://install.python-poetry.org | python3 -
 	mkdir $ZSH_CUSTOM/plugins/poetry
 	poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+
+pylsp:
+	@echo "Install pylsp-related module configs"
+	mkdir -p ~/.config
+	ln -sf $$(pwd)/pycodestyle.conf ~/.config/.pycodestyle
