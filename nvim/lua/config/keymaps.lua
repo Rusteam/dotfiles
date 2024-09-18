@@ -34,16 +34,10 @@ vim.api.nvim_set_keymap("n", "<C-/>", "<Cmd>FloatermToggle<cr>", { noremap = tru
 vim.api.nvim_set_keymap("t", "<C-n>", "<Cmd>FloatermNext<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-p>", "<Cmd>FloatermPrev<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-k>", "<Cmd>FloatermKill<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("t", "<C-a>", "<Cmd>FloatermNew<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-  "t",
-  "<C-e>",
-  "<C-\\><C-n>:FloatermNew! conda activate $(cat .conda-env)<cr>",
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap("t", "<C-t>", "<Cmd>FloatermNew<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap(
   "t",
   "<C-y>",
-  "<C-\\><C-n>:FloatermNew! conda activate $(cat .conda-env) && ipython<cr>",
+  "<Cmd>FloatermNew! --name=ipython ipython <cr>",
   { noremap = true, silent = true }
 )
