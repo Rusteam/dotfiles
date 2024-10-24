@@ -46,4 +46,4 @@ poetry:
 pylsp:
 	@echo "Install pylsp-related module configs"
 	mkdir -p ~/.config
-	ln -sf $$(pwd)/pycodestyle.conf ~/.config/.pycodestyle
+	ln -sf $$(pwd)/pycodestyle.conf ~/.config/pycodestyle

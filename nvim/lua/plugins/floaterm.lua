@@ -8,19 +8,10 @@ return {
   end,
 
   keys = {
-    { "<leader>fl", "<cmd>FloatermToggle<cr>", desc = "Toggle floaterm" },
-    {
-      "<leader>fa",
-      "<cmd>FloatermNew! conda activate $(cat .conda-env)<cr>",
-      desc = "Create a new terminal window with conda env",
-    },
-    {
-      "<leader>fi",
-      "<cmd>FloatermNew! --name=ipython conda activate $(cat .conda-env) && ipython<cr>",
-      desc = "Create ipython console",
-    },
-    { "<leader>fs", "<cmd>FloatermSend! --name=ipython<cr>", desc = "Send current line to ipython" },
-    { "<leader>fv", "<cmd>'<,'>FloatermSend! --name=ipython<cr>", desc = "Send current selection to ipython" },
-    { "<leader>fw", "<cmd>%FloatermSend! --name=ipython<cr>", desc = "Send the whole buffer to ipython" },
+    { "<leader>zf", "<cmd>FloatermToggle<cr>", desc = "Toggle floaterm" },
+    { "<leader>zi", "<cmd>FloatermNew! --name=ipython ipython<cr>", desc = "Create a new ipython terminal" },
+    { "<leader>zl", "<cmd>FloatermSend! --name=ipython<cr>", desc = "Send current line to ipython" },
+    { "<leader>zv", "<cmd>'<,'>FloatermSend! --name=ipython<cr>", desc = "Send current selection to ipython" },
+    { "<leader>zb", "<cmd>%FloatermSend! --name=ipython<cr>", desc = "Send the whole buffer to ipython" },
   },
 }

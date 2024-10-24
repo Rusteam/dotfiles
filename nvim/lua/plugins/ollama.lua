@@ -27,6 +27,20 @@ return {
 
   opts = {
     -- your configuration overrides
-    model = "llama2",
+    model = "llama3.1",
+    prompts = {
+      Readme_Selection = {
+        prompt = "Generate readme-style docs for the following code:\n\n```$ftype\n$sel```"
+          .. "\n\nUtilize markdown featues such as headers, list items, code highlighting, etc. "
+          .. "for it to look pretty and well-structured. Try to be brief and omit trivial aspects.",
+        action = "display",
+      },
+      Readme_Buffer = {
+        prompt = "Generate readme-style docs for the following code:\n\n```$ftype\n$buf```"
+          .. "\n\nUtilize markdown featues such as headers, list items, code highlighting, etc. "
+          .. "for it to look pretty and well-structured. Try to be brief and omit trivial aspects.",
+        action = "display",
+      },
+    },
   },
 }
