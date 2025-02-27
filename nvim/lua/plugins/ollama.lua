@@ -41,6 +41,11 @@ return {
           .. "for it to look pretty and well-structured. Try to be brief and omit trivial aspects.",
         action = "display",
       },
+      Docstring = {
+        prompt = "Generate a concise docstring in the google docstring format:\n\n```$ftype\n$sel```."
+          .. "\n\nSimply return the docstring itself inside triple quotes without any other comment.",
+        action = "display",
+      },
     },
   },
 }
