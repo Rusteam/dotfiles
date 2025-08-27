@@ -1,15 +1,20 @@
 return {
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+  "mason-org/mason.nvim",
+  "mason-org/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
-
   opts = {
     setup = {
       require("mason").setup(),
-      require("mason-lspconfig").setup(),
-      require("lspconfig").pyright.setup({
-        autostart = false,
+      require("mason-lspconfig").setup({
+        automatic_enable = {
+          exclude = {
+            "pyright",
+          },
+        },
       }),
+      -- require("lspconfig").pyright.setup({
+      --   autostart = false,
+      -- }),
       require("lspconfig").pylsp.setup({
         settings = {
           pylsp = {

@@ -8,7 +8,7 @@ return {
   end,
 
   keys = {
-    { "<leader>zf", "<cmd>FloatermUpdate --width=1.0 --height=1.0<cr>", desc = "Set floaterm full-screen" },
+    { "<leader>zf", "<cmd>FloatermUpdate --width=0.85 --height=0.85<cr>", desc = "Set floaterm full-screen" },
     { "<leader>zm", "<cmd>FloatermUpdate --width=0.6 --height=0.6<cr>", desc = "Set floaterm mid-screen" },
     { "<leader>zi", "<cmd>FloatermNew! --name=ipython ipython<cr>", desc = "Create a new ipython terminal" },
     { "<leader>zl", "<cmd>FloatermSend! --name=ipython<cr>", desc = "Send current line to ipython" },
