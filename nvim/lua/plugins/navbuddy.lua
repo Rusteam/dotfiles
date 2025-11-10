@@ -8,6 +8,9 @@ return {
         "MunifTanjim/nui.nvim",
       },
       opts = { lsp = { auto_attach = true } },
+      keys = {
+        { "<leader>nb", "<cmd>Navbuddy<cr>", desc = "Open Navbuddy" },
+      },
     },
   },
   -- your lsp config or other stuff
