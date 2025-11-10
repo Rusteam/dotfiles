@@ -3,17 +3,15 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        pyright = false,
-        pylsp = {
+        pylsp = false,
+        pyright = {
           settings = {
-            pylsp = {
-              plugins = {
-                rope_autoimport = {
-                  enabled = true,
-                  memory = true,
-                  completions = { enabled = true },
-                  code_actions = { enabled = true },
-                },
+            pyright = {
+              autoImportCompletion = true,
+            },
+            python = {
+              analysis = {
+                autoImportCompletions = true,
               },
             },
           },

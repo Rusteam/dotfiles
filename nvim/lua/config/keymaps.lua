@@ -32,6 +32,7 @@ vim.api.nvim_set_keymap("v", "J", ":m '>+1<CR>gv=gv", { silent = true })
 -- Map Ctrl+/ to toggle floaterm
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 vim.api.nvim_set_keymap("n", "<C-/>", "<Cmd>FloatermToggle<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("t", "<C-/>", "<Cmd>FloatermToggle<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-n>", "<Cmd>FloatermNext<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-p>", "<Cmd>FloatermPrev<cr>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("t", "<C-k>", "<Cmd>FloatermKill<cr>", { noremap = true, silent = true })
