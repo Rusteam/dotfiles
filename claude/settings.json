@@ -1,7 +1,9 @@
 {
+  "model": "opus",
   "statusLine": {
     "type": "command",
     "command": "bash /Users/rustynail/.claude/statusline-command.sh"
   },
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "effortLevel": "high"
 }
