@@ -24,6 +24,14 @@ make p10k
 make claude
 ```
 
+**Install Neovim plugin dependencies:**
+
+```bash
+make deps
+```
+
+Installs external CLI tools required by LazyVim plugins via Homebrew: fzf, ripgrep, fd, lazygit, tree-sitter, and node.
+
 **Install Claude Code config:**
 
 ```bash
@@ -31,6 +39,14 @@ make claude
 ```
 
 Symlinks `claude/settings.json` and `claude/statusline-command.sh` into `~/.claude/`.
+
+**Install peon-ping (audio notifications for AI agents):**
+
+```bash
+make peon
+```
+
+Installs [peon-ping](https://github.com/PeonPing/peon-ping), registers Claude Code hooks, and sets the default sound pack.
 
 **Install system-wide python tools:**
 

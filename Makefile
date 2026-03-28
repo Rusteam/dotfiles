@@ -11,6 +11,10 @@ vim:
 	mkdir -p ~/.config
 	ln -sf $$(pwd)/nvim ~/.config/nvim
 
+deps:
+	@echo "Installing external CLI dependencies for Neovim plugins"
+	brew install fzf ripgrep fd lazygit tree-sitter tree-sitter-cli node
+
 omz:
 	@echo "Installing Oh My Zsh"
 	# Install Oh My Zsh
@@ -52,3 +56,7 @@ pylsp:
 	@echo "Install pylsp-related module configs"
 	mkdir -p ~/.config
 	ln -sf $$(pwd)/pycodestyle.conf ~/.config/pycodestyle
+
+peon:
+	@echo "Installing peon-ping (audio notifications for AI coding agents)"
+	curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash
