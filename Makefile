@@ -1,4 +1,4 @@
-all: vim tmux omz p10k
+all: vim tmux omz p10k claude
 
 tmux:
 	@echo "Installing TPM for tmux config"
@@ -25,6 +25,11 @@ p10k:
 	@echo "Install powerlevel10k theme"
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 	ln -sf $$(pwd)/p10k.conf ~/.p10k.zsh
+
+claude:
+	@echo "Linking Claude Code config files"
+	ln -sf $$(pwd)/claude/settings.json ~/.claude/settings.json
+	ln -sf $$(pwd)/claude/statusline-command.sh ~/.claude/statusline-command.sh
 
 conda:
 	@echo "Install miniconda for macos arm64 and intialize for zsh"

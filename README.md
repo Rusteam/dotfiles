@@ -21,7 +21,16 @@ make tmux
 make omz
 make vim
 make p10k
+make claude
 ```
+
+**Install Claude Code config:**
+
+```bash
+make claude
+```
+
+Symlinks `claude/settings.json` and `claude/statusline-command.sh` into `~/.claude/`.
 
 **Install system-wide python tools:**
 
