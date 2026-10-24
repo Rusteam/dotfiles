@@ -17,11 +17,13 @@ make
 **Install one-by-one**
 
 ```bash
-make tmux
+make tmux   # also installs tpm plugins (vim-tmux-navigator etc.)
 make omz
 make vim
 make p10k
 ```
+
+`make` runs `vim tmux omz p10k` only.
 
 **Install system-wide python tools:**
 

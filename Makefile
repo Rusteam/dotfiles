@@ -1,15 +1,19 @@
 all: vim tmux omz p10k
 
+.PHONY: all tmux vim omz p10k conda conda_zsh poetry pylsp
+
 tmux:
 	@echo "Installing TPM for tmux config"
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	[ -d ~/.tmux/plugins/tpm ] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 	ln -sf $$(pwd)/tmux.conf ~/.tmux.conf
+	# tpm only fetches plugins on request; without this C-hjkl navigation is missing
+	~/.tmux/plugins/tpm/bin/install_plugins
 
 vim:
 	@echo "Installing Neovim and setting up config"
 	# Link system Neovim config to your ./nvim folder
 	mkdir -p ~/.config
-	ln -sf $$(pwd)/nvim ~/.config/nvim
+	ln -sfn $$(pwd)/nvim ~/.config/nvim
 
 omz:
 	@echo "Installing Oh My Zsh"
@@ -23,7 +27,7 @@ omz:
 
 p10k:
 	@echo "Install powerlevel10k theme"
-	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $${ZSH_CUSTOM:-$$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 	ln -sf $$(pwd)/p10k.conf ~/.p10k.zsh
 
 conda:
@@ -40,8 +44,8 @@ conda_zsh:
 poetry:
 	@echo "Install poetry system-wide for python project management"
 	curl -sSL https://install.python-poetry.org | python3 -
-	mkdir $ZSH_CUSTOM/plugins/poetry
-	poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+	mkdir -p $${ZSH_CUSTOM:-$$HOME/.oh-my-zsh/custom}/plugins/poetry
+	poetry completions zsh > $${ZSH_CUSTOM:-$$HOME/.oh-my-zsh/custom}/plugins/poetry/_poetry
 
 pylsp:
 	@echo "Install pylsp-related module configs"
